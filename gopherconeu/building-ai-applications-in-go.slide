@@ -1,0 +1,320 @@
+# Building AI Applications in Go
+Gophercon Europe 2024
+19 Jun 2024
+Tags: Go, AI, LLM, Open Source
+Summary: This talk explores how Go can be leveraged today in building AI-enabled tools and discusses what the future might hold. We delve into how Go fits within the AI/LLM ecosystem and chart out how we can expand its role. Join us to shape the future of Go and AI/LLM programming.
+
+Travis Cline (AKA tmc)
+Author/Maintainer of LangChainGo
+tmc@tmc.dev
+@traviscline
+github.com/tmc
+
+: Welcome everyone to this exciting talk on Building AI Applications in Go. I'm Travis Cline, the author and maintainer of LangChainGo. Today, we'll explore the intersection of Go and AI, and you can leverage Go to build powerful AI-enabled applications, and how you can help the future of Go and AI.
+
+## Building AI Applications in Go
+
+## High level agenda
+
+Today we'll be exploring the intersection of Go and AI. Here's the agenda:
+- Crash course on what's happening in the Generative AI
+- Go's potential in GenAI
+- Introduction to LangChainGo
+- Demonstration of of AI-powered tools built with Go
+- A nod to LangChainGo's future, and an invitation to join
+
+: Provide a clear overview of what the audience can expect from this talk. Emphasize the exciting potential of Go in the AI/LLM ecosystem.
+
+## $(whoami)
+* Long time open source contributor.
+* Long time artificial intelligence interest.
+  * Deep in the AI winter.
+* Active participant in the Generative AI craze happening in San Francisco.
+* Author+Maintainer of [LangChainGo](https://github.com/tmc/langchaingo)
+* Have been building and deploying ML/AI systems for several years.
+* Go fan
+
+.image images/ai-and-go.jpeg 150 _
+
+: Share your background and expertise to establish credibility. Highlight your long-standing interest in AI and your experience building ML/AI systems.
+
+## Generative AI Ecosystem
+
+## Generative AI Ecosystem: Enterprise Trends
+
+## Generative AI Ecosystem: Average Spend Increasing
+: Emphasize the significant growth in enterprise budgets for LLMs, indicating the importance and staying power of this technology.
+
+.image https://a16z.com/wp-content/uploads/2024/03/Average-enterprise-spend-on-LLMs-actual-and-anticipated-scaled.jpg _ 900 
+.caption _Andressen_Report_on_Generative_AI_ by [[https://a16z.com/generative-ai-enterprise-2024/][a16z]]
+
+## Generative AI Ecosystem: Major Suppliers
+.image https://d1lamhf6l6yk6d.cloudfront.net/uploads/2024/03/Which-model-providers-are-enterprises-using-1-scaled.jpg _ 850 
+.caption _Andressen_Report_on_Generative_AI_ by [[https://a16z.com/generative-ai-enterprise-2024/][a16z]]
+
+: Highlight the major players in the GenAI ecosystem to provide context for the audience.
+
+## Generative AI Ecosystem: Role of Open Source Models
+.image https://d1lamhf6l6yk6d.cloudfront.net/uploads/2024/03/Enterprise-expectations-for-open-source-usage-in-2024-and-onward-scaled.jpg _ 900 
+.caption _Andressen_Report_on_Generative_AI_ by [[https://a16z.com/generative-ai-enterprise-2024/][a16z]]
+
+: Emphasize the growing importance of open source models in the GenAI ecosystem. This sets the stage for discussing Go's potential role.
+
+## Generative AI Ecosystem: GenAI Infrastructure Stack
+
+## Generative AI Ecosystem: Infrastructure Stack
+[Sequoia Capital](https://www.sequoiacap.com/article/generative-ai-act-two/)'s perspective on the [GenAI Infrastructure Tooling](https://www.sequoiacap.com/article/generative-ai-act-two/) players.
+
+"[W]e have included a new LLM developer stack that reflects the compute and tooling vendors that companies are turning to as they build generative AI applications in production."
+
+## Generative AI Ecosystem: Infrastructure Stack
+
+.image images/sequoia-stack.jpeg _ 850
+.caption _Generative_AI's_Act_Two_ by [[https://www.sequoiacap.com/article/generative-ai-act-two/][Sequoia]]
+
+## Generative AI Ecosystem: Infrastructure Stack
+
+.image images/sequoia-stack-annotated.jpeg _ 850
+.caption _Generative_AI's_Act_Two_ by [[https://www.sequoiacap.com/article/generative-ai-act-two/][Sequoia]]
+
+: Provide an overview of the GenAI infrastructure stack, highlighting the various components and players involved.
+
+## LangChain
+
+## LangChain: What is LangChain?
+
+_Note_: I do not work for LangChain.
+
+.image https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/65cd1db3881d5c33613395b6_Build%20Your%20App.webp _ 400
+
+LangChain is a framework for developing applications powered by large language models (LLMs).
+
+: Introduce LangChain as a popular framework for LLM-powered applications, setting the stage for discussing LangChainGo.
+
+## Langchain: What is in the LangChain Ecosystem?
+
+.image images/langchain_stack_dark.svg _ 750
+
+## Langchain: What is in the LangChain Ecosystem?
+
+We'll focus on the core components that make up the open source LangChain libraries.
+
+.image images/langchain_stack_zoom.png _ 750
+
+## Langchain: Language Ecosystem
+
+LangChain is written in **Python and JavaScript.**
+
+.image images/camerons-talk.png _ 600
+
+: Recall from cameron's talk that new ecosystems and technologies emerge.
+
+## Langchain: Where does LangChainGo fit in?
+
+Bringing Go to the GenAI ecosystem as a first class player.
+
+.image images/langchain_stack_zoom-go.png _ 750
+
+
+
+: Emphasize the current dominance of Python and JavaScript in the GenAI ecosystem, and issue a call to action for the Go community to influence this landscape.
+
+
+## LangChainGo - LangChain for Go
+
+## LangChainGo: Origins, Rationale
+
+The open source port of the LangChain framework to Go.
+
+.image https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/65cd1db3881d5c33613395b6_Build%20Your%20App.webp _ 400
+
+Tagline: _LangChain for Go, the easiest way to write LLM-based programs in Go._
+
+: Explain the origins and rationale behind LangChainGo, emphasizing its role in making LLM-based programming accessible to Go developers.
+
+## LangChainGo: Project Growth
+
+We're seeing a pretty healthy growth trajectory. **3.6K GitHub Stars**
+
+.image images/github-stars-timeline.png _ 700
+
+: Highlight the impressive growth of the LangChainGo project to demonstrate its increasing popularity and relevance.
+
+## LangChainGo: Contributors
+
+**100 Contribtors!** - Thank you for all that you've done!
+
+.image images/contributors.png _ 700
+
+: Acknowledge and thank the contributors to the LangChainGo project, emphasizing the importance of community involvement.
+
+## LangChainGo: Project Principles
+
+* Be Idiomatic.
+  * We are not doing a 1-1 port from another language, but taking the set of concepts we find useful.
+* Keep it simple.
+  * Strive to keep complexity low.
+* 80/20 Rule applies.
+  * We aren't going to aim for 100% parity with upstream - focus on impact.
+
+: Explain the key principles guiding the LangChainGo project, emphasizing the focus on idiomatic Go, simplicity, and impact.
+
+## LangchainGo: Importing LangchainGo
+
+The `llms` package is the primary interface to langchaingo.
+
+.code -edit examples/example1.go /^import/,/^\)/
+
+## LangchainGo: Using LangchainGo
+
+Basic generation.
+
+.play -edit examples/example1.go /START OMIT/,/END OMIT/
+
+## LangchainGo: Streaming Token
+
+Here we leverage WithStreamingFunc to handle each chunk separately.
+
+.play -edit examples/example2.go /START OMIT/,/END OMIT/
+
+## LangchainGo: Ollama Inference
+
+Here we leverage Ollama with the llama3 model to perform **fully-local** inference.
+
+.play -edit examples/example3.go /START OMIT/,/END OMIT/
+
+.image https://ollama.com/public/ollama.png _ 50
+
+## LangchainGo: Ollama Rocks
+
+Psst, Ollama is excellent, and it's written in Go!
+
+.image https://ollama.com/public/ollama.png _ 100
+
+.play -edit examples/ollama-ps.sh
+
+.play -edit examples/ollama-70b.sh
+
+## LangchainGo: Google Gemini Inference
+.play -edit examples/example4.go /START OMIT/,/END OMIT/
+
+: Walk through code examples demonstrating the usage of LangChainGo, including basic generation, streaming tokens, local inference with Ollama, and Google Gemini inference. Keep the examples clear and concise, focusing on the key concepts.
+
+## LangchainGo Capabilities
+
+## LangchainGo Capabilities: Structured Output 
+
+Structured output refers the concept that we can have the model's token sampling process be constrained to some possible set of outputs.
+
+_Note:_ In some more advanced systems you can even control token selection with a [formal grammar](https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md).
+
+## LangchainGo Capabilities: Tool Calling
+
+Tool calling is a special type of Structured Output where the models can reach out into the 'real world' and carry out actions or gather more information.
+
+In Tool Calling you generally:
+
+1. Supply the model with a possible set of tools to invoke.
+2. Inspect the model's results, calling tools as needed.
+3. Send the Tool responses back into the model.
+
+## LangchainGo Capabilities: Tool Calling
+
+`llms.WithTools(availableTools)` is an option to provide the models possible tool invocation options.
+
+.code -edit examples/openai_function_call_example.go /START OMIT1/,/END OMIT1/
+
+## LangchainGo Capabilities: Tool Calling
+
+`llms.WithTools(availableTools)` is an option to provide the models possible tool invocation options.
+
+.code -edit examples/openai_function_call_example.go /Tools:/,/\.\.\./
+
+## LangchainGo Capabilities: Tool Calling
+
+Putting this together we can coordinate a tool call response and summarization.
+
+.play -edit examples/openai_function_call_example.go /Tool Calling/,/End Tool/
+
+## LangchainGo Capabilities: Vector Databases
+
+## LangchainGo Capabilities: Vector Databases
+
+Vector Databases allow you to conduct semantic searches over content.
+
+.image images/sequoia-vector-dbs.png _ 400
+.caption _Generative_AI's_Act_Two_ by [[https://www.sequoiacap.com/article/generative-ai-act-two/][Sequoia]]
+
+## LangchainGo Capabilities: Vector Databases
+
+From previous Sequoia slide..
+
+.image images/sequoia-vector-dbs.png _ 400
+
+**LangChainGo supports all of these!**
+
+_Personal Note_:, I expect the capabilities of existing stores such as Redis, MongoDB, and PostgreSQL to become advanced and performant enough over time.
+
+: Showcase the key capabilities of LangChainGo, including structured output, tool calling, and vector databases. Provide real-world examples to illustrate the potential of these features.
+
+## LangChainGo: The Future
+
+## LangChainGo: The Future
+
+* Core simplifications
+  * Separation of all vendor-specifics from our core package(s).
+* Documentation Revamp and Refresh
+  * Our docs need a lot of love. Upstream significantly simplified and improved their docs, and we will do the same.
+* Advanced Agent support via [LangGraphGo](https://github.com/tmc/langgraphgo).
+  * While we didn't talk about LangGraphGo, it will become an important part of how to build Agents with LangchainGo.
+* LangSmith integration via [LangSmithGo](https://devalexandre.github.io/langsmithgo/blog/langsmithgo-integrating-llms-and-ai-tools-in-go-applications/)
+  * Thank you Alexandre Souza.
+* Deeper integration with LLM Observability vendors
+
+: Outline the future roadmap for LangChainGo, highlighting key areas of focus such as core simplifications, documentation improvements, advanced agent support, LangSmith integration, and deeper integration with LLM observability vendors. Emphasize the exciting potential of these developments.
+
+## LangchainGo: Crossing the Chasm
+
+Recall Cameron's slide from this morning's keynote:
+
+.image images/camerons-talk.png _ 600
+
+## LangchainGo: Crossing the Chasm
+
+Here's our GitHub star growth:
+
+.image images/github-stars-timeline.png _ 700
+
+## LangchainGo: Crossing the Chasm
+
+We have a ways to go here.
+
+.image images/github-starts-w-lc.png _ 700
+
+## Call for Contributors!
+
+It is a crucial time for Go in Generative AI and you can get involved.
+- Key areas where help is needed
+  - Get involved designing and/or writing documentation.
+  - Write blog posts about usage.
+  - Add a new example.
+  - Improve an existing example.
+  - Help out on our Discord (#langchaingo in the LangChain Discord)
+
+: Issue a strong call to action for the audience to get involved with the LangChainGo project. Highlight specific areas where help is needed and provide concrete examples of how to contribute. Emphasize the importance of community involvement in shaping the future of Go in the GenAI ecosystem.
+
+## Conclusion
+
+Go and AI/LLM development are a powerful combination, and LangChainGo is leading this effort.
+
+By leveraging Go's strengths and embracing open-source collaboration, we can shape the future of AI development together.
+
+**Let's make Go the best choice for reliable, production-grade Generative AI applications.**
+
+: Conclude the talk with a strong message emphasizing the potential of Go and LangChainGo in the AI ecosystem. Recap the key points of the talk, including Go's suitability for AI/LLM development, the importance of open source collaboration, and the exciting future ahead.
+
+: End with a strong call to action, encouraging the audience to get involved with LangChainGo or explore Go for their own AI projects. Thank the audience for their attention and invite questions and discussions.
+
+## 
+
+.background images/gceubg.png
